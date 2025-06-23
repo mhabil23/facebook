@@ -7,7 +7,7 @@ import 'navbar.dart';
 import 'video_menu.dart';
 
 class FacebookVideoPage extends StatefulWidget {
-  const FacebookVideoPage({Key? key}) : super(key: key);
+  const FacebookVideoPage({super.key});
 
   @override
   State<FacebookVideoPage> createState() => _FacebookVideoPageState();
@@ -155,7 +155,7 @@ class _FacebookVideoPageState extends State<FacebookVideoPage> {
   }
 
   Widget _buildVideoListItem(String imageUrl, String text, String time) {
-    return Container(
+    return SizedBox(
       width: 300,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -427,7 +427,7 @@ class _FacebookVideoPageState extends State<FacebookVideoPage> {
 }
 
 class ResponsiveFacebookVideoPage extends StatelessWidget {
-  const ResponsiveFacebookVideoPage({Key? key}) : super(key: key);
+  const ResponsiveFacebookVideoPage({super.key});
 
   @override
   Widget build(BuildContext context) {

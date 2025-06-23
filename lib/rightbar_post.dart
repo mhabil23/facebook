@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RightSidebar extends StatelessWidget {
-  const RightSidebar({Key? key}) : super(key: key);
-@override
+  const RightSidebar({super.key});
+  @override
   Widget build(BuildContext context) {
     return Container(
       color: const Color(0xFFF0F2F5),
@@ -68,7 +68,7 @@ class RightSidebar extends StatelessWidget {
 }
 
 class PostCard extends StatelessWidget {
-   const PostCard({Key? key}) : super(key: key);
+  const PostCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -104,10 +104,7 @@ class PostCard extends StatelessWidget {
                     shape: BoxShape.circle,
                   ),
                   clipBehavior: Clip.antiAlias,
-                  child: Image.asset(
-                    'image/pp.png',
-                    fit: BoxFit.cover,
-                  ),
+                  child: Image.asset('image/pp.png', fit: BoxFit.cover),
                 ),
                 const SizedBox(width: 10),
                 // User info
@@ -136,10 +133,7 @@ class PostCard extends StatelessWidget {
                 IconButton(
                   icon: Text(
                     '···',
-                    style: TextStyle(
-                      color: Color(0xFF65676B),
-                      fontSize: 20,
-                    ),
+                    style: TextStyle(color: Color(0xFF65676B), fontSize: 20),
                   ),
                   onPressed: () {},
                   padding: EdgeInsets.zero,
@@ -148,22 +142,19 @@ class PostCard extends StatelessWidget {
               ],
             ),
           ),
-          
+
           // Post content
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
             child: Text(
               '— di Jakarta Timur.',
-              style: TextStyle(
-                fontSize: 15,
-                height: 1.3,
-              ),
+              style: TextStyle(fontSize: 15, height: 1.3),
             ),
           ),
-          
+
           // Divider
           Divider(height: 1, thickness: 1, color: Color(0xFFE4E6EB)),
-          
+
           // Post actions
           Row(
             children: [
@@ -172,10 +163,10 @@ class PostCard extends StatelessWidget {
               _buildActionButton(Icons.share_outlined, 'Bagikan'),
             ],
           ),
-          
+
           // Divider
           Divider(height: 1, thickness: 1, color: Color(0xFFE4E6EB)),
-          
+
           // Comment section
           Container(
             padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -205,10 +196,7 @@ class PostCard extends StatelessWidget {
                     ),
                     child: Text(
                       'Tulis komentar...',
-                      style: TextStyle(
-                        color: Color(0xFF65676B),
-                        fontSize: 14,
-                      ),
+                      style: TextStyle(color: Color(0xFF65676B), fontSize: 14),
                     ),
                   ),
                 ),
@@ -220,11 +208,7 @@ class PostCard extends StatelessWidget {
                     _buildIconButton(Icons.camera_alt_outlined),
                     _buildIconButton(Icons.sentiment_satisfied_outlined),
                     SizedBox(width: 6),
-                    Icon(
-                      Icons.send,
-                      size: 20,
-                      color: Color(0xFF65676B),
-                    ),
+                    Icon(Icons.send, size: 20, color: Color(0xFF65676B)),
                   ],
                 ),
               ],
@@ -234,7 +218,7 @@ class PostCard extends StatelessWidget {
       ),
     );
   }
-  
+
   Widget _buildIconButton(IconData icon) {
     return GestureDetector(
       onTap: () {},
@@ -243,39 +227,26 @@ class PostCard extends StatelessWidget {
         height: 28,
         margin: EdgeInsets.only(right: 6),
         alignment: Alignment.center,
-        child: Icon(
-          icon,
-          size: 20,
-          color: Color(0xFF65676B),
-        ),
+        child: Icon(icon, size: 20, color: Color(0xFF65676B)),
       ),
     );
   }
-  
+
   Widget _buildActionButton(IconData icon, String label) {
     return Expanded(
       child: TextButton(
         onPressed: () {},
+        style: TextButton.styleFrom(padding: EdgeInsets.symmetric(vertical: 8)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
-              size: 18,
-              color: Color(0xFF65676B),
-            ),
+            Icon(icon, size: 18, color: Color(0xFF65676B)),
             SizedBox(width: 4),
             Text(
               label,
-              style: TextStyle(
-                color: Color(0xFF65676B),
-                fontSize: 13,
-              ),
+              style: TextStyle(color: Color(0xFF65676B), fontSize: 13),
             ),
           ],
-        ),
-        style: TextButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: 8),
         ),
       ),
     );

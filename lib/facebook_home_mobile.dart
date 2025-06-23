@@ -12,7 +12,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +80,7 @@ class Post {
 }
 
 class FacebookHomePageMobile extends StatefulWidget {
-  const FacebookHomePageMobile({Key? key}) : super(key: key);
+  const FacebookHomePageMobile({super.key});
 
   @override
   State<FacebookHomePageMobile> createState() => _FacebookHomePageState();
@@ -314,7 +314,7 @@ class _FacebookHomePageState extends State<FacebookHomePageMobile> {
       final uri = Uri.parse(
         'https://fb.habilazzikri.my.id/facebook-backend/api/postingan.php',
       );
-      void _loadUserData() async {
+      void loadUserData() async {
         SharedPreferences prefs = await SharedPreferences.getInstance();
         setState(() {
           _firstName = prefs.getString('userFirstName') ?? '';
@@ -472,7 +472,7 @@ class _FacebookHomePageState extends State<FacebookHomePageMobile> {
           if (post.content.isNotEmpty)
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 child: Text(
                   post.content,
@@ -587,7 +587,7 @@ class _FacebookHomePageState extends State<FacebookHomePageMobile> {
                         ),
                       ),
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
+                        backgroundColor: WidgetStateProperty.all(
                           Colors.transparent,
                         ),
                       ),
@@ -603,7 +603,7 @@ class _FacebookHomePageState extends State<FacebookHomePageMobile> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
+                        backgroundColor: WidgetStateProperty.all(
                           Colors.transparent,
                         ),
                       ),
@@ -616,7 +616,7 @@ class _FacebookHomePageState extends State<FacebookHomePageMobile> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
+                        backgroundColor: WidgetStateProperty.all(
                           Colors.transparent,
                         ),
                       ),

@@ -5,19 +5,17 @@ class VideoMenu extends StatelessWidget {
   final Function(int) onItemSelected;
 
   const VideoMenu({
-    Key? key,
+    super.key,
     this.selectedIndex = 0,
     required this.onItemSelected,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12),
       decoration: BoxDecoration(
-        border: Border(
-          left: BorderSide(color: Colors.grey[300]!),
-        ),
+        border: Border(left: BorderSide(color: Colors.grey[300]!)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

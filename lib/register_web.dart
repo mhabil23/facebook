@@ -8,7 +8,7 @@ void main() {
 }
 
 class FacebookSignupApp extends StatelessWidget {
-  const FacebookSignupApp({Key? key}) : super(key: key);
+  const FacebookSignupApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class FacebookSignupApp extends StatelessWidget {
 }
 
 class FacebookSignupPage extends StatefulWidget {
-  const FacebookSignupPage({Key? key}) : super(key: key);
+  const FacebookSignupPage({super.key});
 
   @override
   State<FacebookSignupPage> createState() => _FacebookSignupPageState();

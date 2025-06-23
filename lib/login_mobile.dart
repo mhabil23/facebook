@@ -10,7 +10,7 @@ void main() {
 }
 
 class FacebookLoginApp extends StatelessWidget {
-  const FacebookLoginApp({Key? key}) : super(key: key);
+  const FacebookLoginApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class FacebookLoginApp extends StatelessWidget {
 }
 
 class FacebookLoginScreenMobile extends StatefulWidget {
-  const FacebookLoginScreenMobile({Key? key}) : super(key: key);
+  const FacebookLoginScreenMobile({super.key});
 
   @override
   State<FacebookLoginScreenMobile> createState() => _FacebookLoginScreenState();

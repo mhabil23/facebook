@@ -14,7 +14,7 @@ class MarketplaceMainPage extends StatefulWidget {
 }
 
 class _MarketplaceMainPageState extends State<MarketplaceMainPage> {
-  int _selectedIndex = 2; // Marketplace → index ke-2
+  final int _selectedIndex = 2; // Marketplace → index ke-2
 
   void _onItemTapped(int index) {
     if (index == _selectedIndex) return;

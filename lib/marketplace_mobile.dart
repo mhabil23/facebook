@@ -6,6 +6,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,6 +24,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MarketplaceMobileScreen extends StatefulWidget {
+  const MarketplaceMobileScreen({super.key});
+
   @override
   _MarketplaceScreenState createState() => _MarketplaceScreenState();
 }
@@ -341,7 +345,7 @@ class _MarketplaceScreenState extends State<MarketplaceMobileScreen> {
 
 class ProductDetailSheet extends StatelessWidget {
   final Product product;
-  const ProductDetailSheet({Key? key, required this.product}) : super(key: key);
+  const ProductDetailSheet({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {

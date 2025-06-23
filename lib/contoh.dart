@@ -35,6 +35,8 @@ class UserData {
 }
 
 class FacebookRegisterPage extends StatefulWidget {
+  const FacebookRegisterPage({super.key});
+
   @override
   _FacebookRegisterPageState createState() => _FacebookRegisterPageState();
 }
@@ -778,6 +780,6 @@ class _FacebookRegisterPageState extends State<FacebookRegisterPage> {
 
 extension StringExtension on String {
   String capitalize() {
-    return "${this[0].toUpperCase()}${this.substring(1)}";
+    return "${this[0].toUpperCase()}${substring(1)}";
   }
 }

@@ -5,10 +5,10 @@ class FacebookNavBarMobile extends StatelessWidget {
   final Function(int) onItemTapped;
 
   const FacebookNavBarMobile({
-    Key? key,
+    super.key,
     required this.selectedIndex,
     required this.onItemTapped,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

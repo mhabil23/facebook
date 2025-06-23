@@ -6,10 +6,10 @@ class FacebookNavBar extends StatefulWidget implements PreferredSizeWidget {
   final Function(int) onItemSelected;
 
   const FacebookNavBar({
-    Key? key,
+    super.key,
     required this.selectedIndex,
     required this.onItemSelected,
-  }) : super(key: key);
+  });
 
   @override
   Size get preferredSize => const Size.fromHeight(56);

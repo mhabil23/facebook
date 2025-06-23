@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 class PostScreen extends StatelessWidget {
   final String imageUrl;
 
-  const PostScreen({Key? key, required this.imageUrl}) : super(key: key);
+  const PostScreen({super.key, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {

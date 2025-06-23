@@ -2,8 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application_1/registerpassword_mobile.dart';
-import 'registernumberphone.dart';
-import 'registerpassword_mobile.dart';
 import 'registeremail_mobile.dart';
 import 'package:http/http.dart' as http;
 

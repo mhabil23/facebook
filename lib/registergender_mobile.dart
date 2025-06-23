@@ -60,23 +60,17 @@ class _JenisKelaminPageState extends State<JenisKelaminPage> {
               child: Column(
                 children: [
                   // Perempuan Option
-                  _buildGenderOption(
-                    'female',
-                    'female',
-                    isFirst: true,
-                  ),
+                  _buildGenderOption('female', 'female', isFirst: true),
                   Divider(height: 1, color: Colors.grey[300]),
                   // Laki-laki Option
-                  _buildGenderOption(
-                    'male',
-                    'male',
-                  ),
+                  _buildGenderOption('male', 'male'),
                   Divider(height: 1, color: Colors.grey[300]),
                   // Opsi lainnya Option
                   _buildGenderOption(
                     'others',
                     'lainnya',
-                    subtitle: 'Pilih opsi Lainnya untuk memilih jenis kelamin lain atau jika Anda memilih tidak menjawab.',
+                    subtitle:
+                        'Pilih opsi Lainnya untuk memilih jenis kelamin lain atau jika Anda memilih tidak menjawab.',
                     isLast: true,
                   ),
                 ],
@@ -88,17 +82,21 @@ class _JenisKelaminPageState extends State<JenisKelaminPage> {
               width: double.infinity,
               height: 52,
               child: ElevatedButton(
-                onPressed: selectedGender != null
-                    ? () {
-                        print('Selected gender: $selectedGender');
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => NomorPonselPage(gender: selectedGender!), // Passing selectedGender
-                          ),
-                        );
-                      }
-                    : null,
+                onPressed:
+                    selectedGender != null
+                        ? () {
+                          print('Selected gender: $selectedGender');
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder:
+                                  (context) => NomorPonselPage(
+                                    gender: selectedGender!,
+                                  ), // Passing selectedGender
+                            ),
+                          );
+                        }
+                        : null,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xFF1976D2),
                   foregroundColor: Colors.white,
@@ -110,10 +108,7 @@ class _JenisKelaminPageState extends State<JenisKelaminPage> {
                 ),
                 child: Text(
                   'Berikutnya',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
                 ),
               ),
             ),
@@ -142,12 +137,12 @@ class _JenisKelaminPageState extends State<JenisKelaminPage> {
   }
 
   Widget _buildGenderOption(
-    String title, 
-    String value, 
-    {String? subtitle, 
-    bool isFirst = false, 
-    bool isLast = false}
-  ) {
+    String title,
+    String value, {
+    String? subtitle,
+    bool isFirst = false,
+    bool isLast = false,
+  }) {
     return InkWell(
       onTap: () {
         setState(() {
@@ -196,24 +191,26 @@ class _JenisKelaminPageState extends State<JenisKelaminPage> {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: selectedGender == value 
-                    ? Color(0xFF1976D2) 
-                    : Colors.grey[400]!,
+                  color:
+                      selectedGender == value
+                          ? Color(0xFF1976D2)
+                          : Colors.grey[400]!,
                   width: 2,
                 ),
               ),
-              child: selectedGender == value
-                ? Center(
-                    child: Container(
-                      width: 12,
-                      height: 12,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color(0xFF1976D2),
-                      ),
-                    ),
-                  )
-                : null,
+              child:
+                  selectedGender == value
+                      ? Center(
+                        child: Container(
+                          width: 12,
+                          height: 12,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color(0xFF1976D2),
+                          ),
+                        ),
+                      )
+                      : null,
             ),
           ],
         ),
@@ -224,14 +221,13 @@ class _JenisKelaminPageState extends State<JenisKelaminPage> {
 
 // Main App
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Jenis Kelamin',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: 'Roboto',
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Roboto'),
       home: JenisKelaminPage(),
       debugShowCheckedModeBanner: false,
     );

@@ -7,7 +7,7 @@ import 'navbar.dart';
 import 'post_screen.dart';
 
 class SocialMediaScreen extends StatefulWidget {
-  const SocialMediaScreen({Key? key}) : super(key: key);
+  const SocialMediaScreen({super.key});
 
   @override
   State<SocialMediaScreen> createState() => _SocialMediaScreenState();

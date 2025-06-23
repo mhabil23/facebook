@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'navbar.mobile.dart';
 
 class TemanPage extends StatefulWidget {
-  const TemanPage({Key? key}) : super(key: key);
+  const TemanPage({super.key});
 
   @override
   State<TemanPage> createState() => _TemanPageState();
@@ -166,7 +166,7 @@ class _TemanPageState extends State<TemanPage> {
       margin: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
-          Container(
+          SizedBox(
             width: 80,
             height: 80,
             child:

@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/facebook_home_mobile.dart';
 import 'package:flutter_application_1/facebook_home_web.dart';
 import 'package:flutter_application_1/marketplace_main.dart';
-import 'package:flutter_application_1/register_web.dart';
 import 'package:flutter_application_1/video.dart';
 import 'package:flutter_application_1/marketplace_mobile.dart';
 import 'package:flutter_application_1/login_mobile.dart';
 import 'package:flutter_application_1/login_web.dart';
 import 'package:flutter_application_1/friends.dart';
-import 'package:flutter/foundation.dart';
 import 'responsive_widget.dart';
 
 void main() {

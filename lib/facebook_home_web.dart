@@ -12,7 +12,7 @@ import 'main_post.dart';
 import 'video_player_item.dart';
 
 class FacebookClone extends StatelessWidget {
-  const FacebookClone({Key? key}) : super(key: key);
+  const FacebookClone({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class FacebookClone extends StatelessWidget {
 }
 
 class FacebookHomePage extends StatefulWidget {
-  const FacebookHomePage({Key? key}) : super(key: key);
+  const FacebookHomePage({super.key});
 
   @override
   _FacebookHomePageState createState() => _FacebookHomePageState();
@@ -38,7 +38,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   int _selectedIndex = 0;
   List<Map<String, dynamic>> _posts = [];
-  List<Map<String, dynamic>> _stories = [];
+  final List<Map<String, dynamic>> _stories = [];
   bool _loadingPosts = true;
   String _firstName = '';
   String _lastName = '';
@@ -121,7 +121,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
         _buildStorySection(), // Anda bisa isi atau placeholder dulu
         const SizedBox(height: 10),
         if (_posts.isEmpty) const Center(child: Text('Belum ada postingan')),
-        ..._posts.map((post) => _buildDynamicPostCard(post)).toList(),
+        ..._posts.map((post) => _buildDynamicPostCard(post)),
       ],
     );
   }
@@ -363,7 +363,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
     return ListTile(
       leading: ClipRRect(
         borderRadius: BorderRadius.circular(8),
-        child: Container(
+        child: SizedBox(
           width: 35,
           height: 35,
           child: Image.network(
@@ -680,7 +680,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
         padding: const EdgeInsets.symmetric(horizontal: 0),
         children: [
           _buildCreateStoryCard(),
-          ..._stories.map((story) => _buildDynamicStoryCard(story)).toList(),
+          ..._stories.map((story) => _buildDynamicStoryCard(story)),
           _buildStoryCard(
             "Muhaimin Ilyas",
             "http://localhost/flutter_application_1/php/tampilkan.php?id=18",
@@ -1066,7 +1066,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
             ),
           if (post['image'] != null && post['image'].toString().isNotEmpty) ...[
             const SizedBox(height: 10),
-            Container(
+            SizedBox(
               width: double.infinity,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
@@ -1175,8 +1175,9 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
       final difference = DateTime.now().difference(dt);
 
       if (difference.inMinutes < 1) return 'Baru saja';
-      if (difference.inMinutes < 60)
+      if (difference.inMinutes < 60) {
         return '${difference.inMinutes} menit yang lalu';
+      }
       if (difference.inHours < 24) return '${difference.inHours} jam yang lalu';
       return '${difference.inDays} hari yang lalu';
     } catch (_) {
@@ -1250,7 +1251,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
 
   // ubah signature jadi terima imageUrl, bukan asset path
   Widget _buildSponsorItem(String imageUrl, String title, String domain) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 80,
       child: Row(

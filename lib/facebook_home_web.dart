@@ -62,7 +62,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
     try {
       final response = await http.get(
         Uri.parse(
-          'http://fb.habilazzikri.my.id/facebook-backend/api/get_postingan.php',
+          'https://fb.habilazzikri.my.id/facebook-backend/api/get_postingan.php',
         ),
       );
 
@@ -150,7 +150,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
   ) async {
     try {
       final uri = Uri.parse(
-        'http://fb.habilazzikri.my.id/facebook-backend/api/postingan.php',
+        'https://fb.habilazzikri.my.id/facebook-backend/api/postingan.php',
       );
       var request = http.MultipartRequest('POST', uri);
 

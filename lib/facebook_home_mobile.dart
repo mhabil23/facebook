@@ -135,7 +135,7 @@ class _FacebookHomePageState extends State<FacebookHomePageMobile> {
 
       final response = await http.get(
         Uri.parse(
-          'http://fb.habilazzikri.my.id/facebook-backend/api/get_postingan.php',
+          'https://fb.habilazzikri.my.id/facebook-backend/api/get_postingan.php',
         ),
         headers: {'Content-Type': 'application/json'},
       );
@@ -312,7 +312,7 @@ class _FacebookHomePageState extends State<FacebookHomePageMobile> {
   ) async {
     try {
       final uri = Uri.parse(
-        'http://fb.habilazzikri.my.id/facebook-backend/api/postingan.php',
+        'https://fb.habilazzikri.my.id/facebook-backend/api/postingan.php',
       );
       void _loadUserData() async {
         SharedPreferences prefs = await SharedPreferences.getInstance();

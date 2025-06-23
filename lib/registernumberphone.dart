@@ -23,7 +23,7 @@ class _NomorPonselPageState extends State<NomorPonselPage> {
 
   // Ganti sesuai URL backend PHP-mu
   final String _apiUrl =
-      'http://fb.habilazzikri.my.id/facebook-backend/api/signup.php';
+      'https://fb.habilazzikri.my.id/facebook-backend/api/signup.php';
 
   Future<void> _submitPhone() async {
     final phone = _phoneController.text.trim();

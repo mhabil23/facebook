@@ -58,7 +58,7 @@ class _BirthDatePickerScreenState extends State<BirthDatePickerScreen> {
   };
 
   final String _apiUrl =
-      'http://fb.habilazzikri.my.id/facebook-backend/api/signup.php';
+      'https://fb.habilazzikri.my.id/facebook-backend/api/signup.php';
 
   Future<void> submitBirthDate() async {
     setState(() {

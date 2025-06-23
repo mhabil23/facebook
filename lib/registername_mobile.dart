@@ -34,7 +34,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   // Ganti sesuai URL endpoint PHP kamu
   final String _signupUrl =
-      'http://fb.habilazzikri.my.id/facebook-backend/api/signup.php';
+      'https://fb.habilazzikri.my.id/facebook-backend/api/signup.php';
 
   Future<bool> _submit() async {
     final firstName = firstNameController.text.trim();

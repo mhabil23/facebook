@@ -29,7 +29,7 @@ class _EmailInputScreenState extends State<EmailInputScreen> {
   String? _message;
 
   final String _apiUrl =
-      'http://fb.habilazzikri.my.id/facebook-backend/api/signup.php';
+      'https://fb.habilazzikri.my.id/facebook-backend/api/signup.php';
 
   Future<void> _submitEmail() async {
     final email = _emailController.text.trim();

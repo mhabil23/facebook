@@ -64,7 +64,7 @@ class _FacebookLoginScreenState extends State<FacebookLoginScreenWeb> {
     try {
       final response = await http.post(
         Uri.parse(
-          'http://fb.habilazzikri.my.id/facebook-backend/api/login.php',
+          'https://fb.habilazzikri.my.id/facebook-backend/api/login.php',
         ),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode(loginData),

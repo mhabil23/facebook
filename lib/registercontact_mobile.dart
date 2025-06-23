@@ -29,7 +29,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
   bool _usePhone = true;
 
   final String _apiUrl =
-      'http://fb.habilazzikri.my.id/facebook-backend/api/signup.php';
+      'https://fb.habilazzikri.my.id/facebook-backend/api/signup.php';
 
   Future<void> _submitContactInfo() async {
     final phone = _phoneController.text.trim();

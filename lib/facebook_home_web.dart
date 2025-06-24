@@ -305,15 +305,15 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
             ),
             _buildGroupItem(
               "FORUM KOMENTAR KOLUT",
-              "http://localhost/flutter_application_1/php/tampilkan.php?id=10",
+              "https://fb.habilazzikri.my.id/php/tampilkan.php?id=10",
             ),
             _buildGroupItem(
               "FORUM KOLUT",
-              "http://localhost/flutter_application_1/php/tampilkan.php?id=10",
+              "https://fb.habilazzikri.my.id/php/tampilkan.php?id=10",
             ),
             _buildGroupItem(
               "WormsZone.io - Slither Snake",
-              "http://localhost/flutter_application_1/php/tampilkan.php?id=22",
+              "https://fb.habilazzikri.my.id/php/tampilkan.php?id=22",
             ),
 
             const SizedBox(height: 20),
@@ -411,7 +411,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
                   radius: 20,
                   backgroundColor: Colors.grey,
                   backgroundImage: NetworkImage(
-                    'http://localhost/flutter_application_1/php/tampilkan.php?id=20',
+                    'https://fb.habilazzikri.my.id/php/tampilkan.php?id=20',
                   ),
                 ),
                 const SizedBox(width: 10),
@@ -536,7 +536,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
                           radius: 20,
                           backgroundColor: Colors.grey,
                           backgroundImage: NetworkImage(
-                            'http://localhost/flutter_application_1/php/tampilkan.php?id=20',
+                            'https://fb.habilazzikri.my.id/php/tampilkan.php?id=20',
                           ),
                         ),
                         const SizedBox(width: 10),
@@ -683,15 +683,15 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
           ..._stories.map((story) => _buildDynamicStoryCard(story)),
           _buildStoryCard(
             "Muhaimin Ilyas",
-            "http://localhost/flutter_application_1/php/tampilkan.php?id=18",
+            "https://fb.habilazzikri.my.id/php/tampilkan.php?id=18",
           ),
           _buildStoryCard(
             "Nauqi",
-            "http://localhost/flutter_application_1/php/tampilkan.php?id=5",
+            "https://fb.habilazzikri.my.id/php/tampilkan.php?id=5",
           ),
           _buildStoryCard(
             "Iccank",
-            "http://localhost/flutter_application_1/php/tampilkan.php?id=19",
+            "https://fb.habilazzikri.my.id/php/tampilkan.php?id=19",
           ),
         ],
       ),
@@ -937,7 +937,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
                   // misal avatar statis atau juga dari DB
                   image: DecorationImage(
                     image: NetworkImage(
-                      'http://localhost/flutter_application_1/php/tampilkan.php?id=20',
+                      'https://fb.habilazzikri.my.id/php/tampilkan.php?id=20',
                     ),
                     fit: BoxFit.cover,
                   ),
@@ -999,7 +999,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
                   radius: 20,
                   backgroundColor: Colors.grey,
                   backgroundImage: NetworkImage(
-                    'http://localhost/flutter_application_1/php/tampilkan.php?id=20',
+                    'https://fb.habilazzikri.my.id/php/tampilkan.php?id=20',
                   ),
                 ),
 
@@ -1225,7 +1225,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: _buildSponsorItem(
-              'http://localhost/flutter_application_1/php/tampilkan.php?id=24',
+              'https://fb.habilazzikri.my.id/php/tampilkan.php?id=24',
               'daftar-->',
               'google.com',
             ),
@@ -1234,7 +1234,7 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: _buildSponsorItem(
-              'http://localhost/flutter_application_1/php/tampilkan.php?id=15',
+              'https://fb.habilazzikri.my.id/php/tampilkan.php?id=15',
               'Mobile Legends',
               'Moonton',
             ),
@@ -1336,19 +1336,19 @@ class _FacebookHomePageState extends State<FacebookHomePage> {
         // Ubah pemanggilan di ListView:
         _buildContactItem(
           'Curry',
-          'http://localhost/flutter_application_1/php/tampilkan.php?id=3',
+          'https://fb.habilazzikri.my.id/php/tampilkan.php?id=3',
         ),
         _buildContactItem(
           'Edward',
-          'http://localhost/flutter_application_1/php/tampilkan.php?id=2',
+          'https://fb.habilazzikri.my.id/php/tampilkan.php?id=2',
         ),
         _buildContactItem(
           'Nouqi Azzauka',
-          'http://localhost/flutter_application_1/php/tampilkan.php?id=5',
+          'https://fb.habilazzikri.my.id/php/tampilkan.php?id=5',
         ),
         _buildContactItem(
           'Doncic',
-          'http://localhost/flutter_application_1/php/tampilkan.php?id=4',
+          'https://fb.habilazzikri.my.id/php/tampilkan.php?id=4',
         ),
       ],
     );

@@ -100,14 +100,12 @@ class _FacebookVideoPageState extends State<FacebookVideoPage> {
   Widget _buildNewVideosSection() {
     final List<Map<String, String>> newVideos = [
       {
-        'imageUrl':
-            'http://localhost/flutter_application_1/php/tampilkan.php?id=20',
+        'imageUrl': 'https://fb.habilazzikri.my.id/php/tampilkan.php?id=20',
         'text': 'Muhaimin Ilyas.',
         'time': '40 menit lalu',
       },
       {
-        'imageUrl':
-            'http://localhost/flutter_application_1/php/tampilkan.php?id=18',
+        'imageUrl': 'https://fb.habilazzikri.my.id/php/tampilkan.php?id=18',
         'text': 'Anda membagikan video.',
         'time': '40 menit lalu',
       },
@@ -345,7 +343,7 @@ class _FacebookVideoPageState extends State<FacebookVideoPage> {
               width: double.infinity,
               height: double.infinity,
               child: Image.network(
-                'http://localhost/flutter_application_1/php/tampilkan.php?id=16',
+                'https://fb.habilazzikri.my.id/php/tampilkan.php?id=16',
                 fit: BoxFit.cover,
                 loadingBuilder: (context, child, progress) {
                   if (progress == null) return child;

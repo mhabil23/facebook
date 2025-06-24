@@ -62,7 +62,7 @@ class Post {
             ? json['authorImage']
             : '2';
     final authorImageUrl =
-        'http://localhost/flutter_application_1/php/tampilkan.php?id=20';
+        'https://fb.habilazzikri.my.id/php/tampilkan.php?id=20';
     return Post(
       id: json['id'] ?? 0,
       author: json['author'] ?? 'Unknown',
@@ -311,22 +311,34 @@ class _FacebookHomePageState extends State<FacebookHomePageMobile> {
     BuildContext context,
   ) async {
     try {
+      // Ambil nama pengguna langsung dari SharedPreferences
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      final String firstName = prefs.getString('userFirstName') ?? '';
+      final String lastName = prefs.getString('userLastName') ?? '';
+      final String author = '$firstName $lastName'.trim();
+
+      // Validasi nama
+      if (author.isEmpty) {
+        _showSnackBar('Nama pengguna tidak ditemukan. Silakan login ulang.');
+        return;
+      }
+
+      // Validasi konten
+      if (content.trim().isEmpty && image == null && selectedVideo == null) {
+        _showSnackBar('Konten, gambar, atau video tidak boleh kosong.');
+        return;
+      }
+
       final uri = Uri.parse(
         'https://fb.habilazzikri.my.id/facebook-backend/api/postingan.php',
       );
-      void loadUserData() async {
-        SharedPreferences prefs = await SharedPreferences.getInstance();
-        setState(() {
-          _firstName = prefs.getString('userFirstName') ?? '';
-          _lastName = prefs.getString('userLastName') ?? '';
-        });
-      }
 
       final request =
           http.MultipartRequest('POST', uri)
-            ..fields['author'] = '$_firstName $_lastName'
+            ..fields['author'] = author
             ..fields['content'] = content;
 
+      // Upload gambar jika ada
       if (image != null) {
         request.files.add(
           http.MultipartFile.fromBytes(
@@ -336,6 +348,8 @@ class _FacebookHomePageState extends State<FacebookHomePageMobile> {
           ),
         );
       }
+
+      // Upload video jika ada
       if (selectedVideo != null) {
         request.files.add(
           http.MultipartFile.fromBytes(
@@ -348,16 +362,20 @@ class _FacebookHomePageState extends State<FacebookHomePageMobile> {
 
       final response = await request.send();
       final responseBody = await response.stream.bytesToString();
+
       final result = jsonDecode(responseBody);
-      if (response.statusCode == 200 && result['success']) {
+
+      if ((response.statusCode == 200 || response.statusCode == 201) &&
+          result['success'] == true) {
         _showSnackBar(result['message']);
-        // Refresh posts setelah berhasil posting
-        _fetchPosts();
+        _fetchPosts(); // Refresh data
       } else {
-        _showSnackBar('Gagal posting');
+        _showSnackBar(
+          'Gagal posting: ${result['message'] ?? 'Tidak diketahui'}',
+        );
       }
     } catch (e) {
-      _showSnackBar('Error: $e');
+      _showSnackBar('Terjadi kesalahan: $e');
     }
   }
 

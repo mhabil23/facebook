@@ -275,7 +275,7 @@ class _MarketplaceScreenState extends State<MarketplaceMobileScreen> {
                   top: Radius.circular(8),
                 ),
                 child: Image.network(
-                  'http://localhost/flutter_application_1/php/tampilkan.php?id=${product.id}',
+                  'https://fb.habilazzikri.my.id/php/tampilkan.php?id=${product.id}',
                   width: double.infinity,
                   height: double.infinity,
                   fit: BoxFit.cover,
@@ -380,7 +380,7 @@ class ProductDetailSheet extends StatelessWidget {
                   height: 300,
                   width: double.infinity,
                   child: Image.network(
-                    'http://localhost/flutter_application_1/php/tampilkan.php?id=${product.id}',
+                    'https://fb.habilazzikri.my.id/php/tampilkan.php?id=${product.id}',
                     fit: BoxFit.cover,
                     errorBuilder:
                         (_, __, ___) => Container(
